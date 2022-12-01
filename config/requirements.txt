@@ -1,0 +1,5 @@
+##Framework libs
+Flask>=2.2
+
+#network
+gunicorn
