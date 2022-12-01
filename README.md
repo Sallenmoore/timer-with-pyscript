@@ -26,18 +26,20 @@
 
 ### Start/Status/Stop Commands
 
-- build and start the container
-  - `docker-compose up --build -d`
+- build container
+  - `make build`
+- build and run the container
+  - `make run`
+- start the container and open localhost
+  - `make start`
 - container status
   - `docker-compose ps -a`
 - run a command in the container
   - `docker-compose exec -option simple_app <command>`
-- stop and remove running containers
-  - `docker-compose down --remove-orphans`
 - stop all running containers
-  - `sudo docker kill $(sudo docker ps -q)`
+  - `make clean`
 - remove all stopped containers
-  - `sudo docker rm $(sudo docker ps -a -q)`
+  - `make deepclean`
 
 ### Read Logs
 
@@ -50,6 +52,10 @@ docker logs --since=15m -t simple_app
 ```sh
 docker logs -f --since=15m -t <container> &`
 ```
+
+### Run Tests
+
+- `make tests`
 
 ---
 

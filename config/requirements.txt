@@ -1,5 +1,12 @@
 ##Framework libs
 Flask>=2.2
 
-#network
+# Requests
+requests
+
+# Server
 gunicorn
+
+## Testing
+pytest
+coverage
