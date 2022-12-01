@@ -18,6 +18,15 @@
         <!-- PyScript -->
         <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
         <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+        <py-config>
+            autoclose_loader: true
+            {# - runtimes
+              - name: pyodide
+                lang: python
+                src: /static/pyodide/pyodide.js #}
+            [[fetch]]
+            files = ["./static/python/main.py"]
+        </py-config>
         {% endblock %}
     </head>
 
@@ -27,7 +36,7 @@
                 {% block content %}{% endblock %}
             </div>
         </div>
-        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+        <py-script src="{{ url_for('static', filename='python/main.py') }}"></py-script>
     </body>
 
 </html>

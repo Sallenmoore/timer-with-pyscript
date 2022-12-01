@@ -7,7 +7,7 @@ CONTAINERS=$(sudo docker ps -a -q)
 
 
 build: clean
-	docker compose --no-cache build $(APP_NAME)
+	-docker-compose build --no-cache $(APP_NAME)
 
 run: 
 	docker-compose up --build -d
