@@ -1,0 +1,46 @@
+{% import 'macros/general.html' as general_macros %} 
+{% import 'macros/character.html' as character_macros %} 
+{% import 'macros/item.html' as item_macros %} 
+{% import 'macros/monster.html' as monster_macros %} 
+{% import 'macros/spell.html' as spell_macros %} 
+{% import 'macros/dice.html' as dice_macros %} 
+{% extends "base.html" %} 
+
+{% block content %}
+
+<div class="row">
+  <div class="col s5">{{ general_macros.search() }}</div>
+  <div class="col s7 teal lighten-5">
+    <div class="row section">
+      <div class="col s10 offset-s1">
+        {{ character_macros.initiative(characters) }}
+      </div>
+    </div>
+    <div class="row section">
+      <div class="col s11 offset-s1">
+        {{ character_macros.inactive_characters(characters) }}
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="row section">
+      <div class="col s11 offset-s1">
+      {{ character_macros.create() }}
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="row section">
+      <div class="col s11 offset-s1 ">
+        <button
+          class="btn waves-effect waves-light"
+          id="update_compendium"
+          name="update_compendium"
+        >
+          Update Compendium
+        </button>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+{% endblock %}
