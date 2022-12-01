@@ -12,3 +12,4 @@ capture_output = True
 loglevel = f"{os.environ.get('DEBUG_LEVEL').lower()}"
 
 reload=True
+reload_extra_files="templates/"

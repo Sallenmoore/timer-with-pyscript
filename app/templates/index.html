@@ -4,17 +4,40 @@
 {% block content %}
 
 <div class="columns">
-  <div class="column">
-    First column
+  <div class="column is-three-quarters">
+    <div class="columns">
+      <div class="column" id="timer">
+        <time id="clock"></time>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column content" >
+        <ul id="intervals">
+        </ul>
+      </div>
+    </div>
   </div>
-  <div class="column">
-    Second column
-  </div>
-  <div class="column">
-    Third column
-  </div>
-  <div class="column">
-    Fourth column
+  <div class="column" id="options">
+    <p class="title is-1">Options</p>
+    <div class="field">
+      <label class="label">Total Time</label>
+      <div class="control has-icons-left">
+        <input class="input is-success" type="text" value="5:00">
+        <span class="icon is-small is-left">
+          <i class="fas fa-clock"></i>
+        </span>
+      </div>
+    </div>
+    <p class="subtitle is-2">Add Interval</p>
+    <div class="field">
+      <label class="label">Interval</label>
+      <div class="control has-icons-right">
+        <input class="input" type="text">
+        <span class="icon is-small is-left">
+          <i class="fas fa-add"></i>
+        </span>
+      </div>
+    </div>
   </div>
 </div>
 

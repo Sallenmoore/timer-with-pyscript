@@ -48,3 +48,6 @@ function bindEvents(){
 }
 
 //===Then everything below this is all of the other declared functions for my page...
+function function_action(){
+	console.log("Did stuff")
+}

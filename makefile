@@ -6,14 +6,14 @@ CONTAINERS=$(sudo docker ps -a -q)
 
 
 
-build: 
+build: clean
 	docker compose --no-cache build $(APP_NAME)
 
-run: clean
+run: 
 	docker-compose up --build -d
 	docker logs -f --since=15m -t $(APP_NAME)
 
-start: run
+start: clean run
 	xdg-open 'http://localhost'
 ###### CLEANING #######
 
