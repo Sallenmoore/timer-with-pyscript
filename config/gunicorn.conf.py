@@ -9,6 +9,6 @@ errorlog = "-"
 # Whether to send Django output to the error log 
 capture_output = True
 # How verbose the Gunicorn error logs should be 
-loglevel = "debug"
+loglevel = f"{os.environ.get('DEBUG_LEVEL').lower()}"
 
 reload=True
